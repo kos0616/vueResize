@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## vue使用protype處理eventListener的問題
 
-You can use the [editor on GitHub](https://github.com/kos0616/vueResize/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+目前的成功案例是在main.js使用mixin，子組件使用$root.screenWidth來取得目前的螢幕寬
+$root指向main.js
+screenWidth為mixin設定好的固定名稱
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+考量到往後可能會出現無法使用這招的狀況，因此想要以其他的方式實現全域變數
 
-### Markdown
+在看見moment.js使用$protype後，深覺此法非常適合，無奈找不到方法讓值從eventListener吐出來，只能在console.log中哀號
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### sample
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kos0616/vueResize/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[前往sample網址](https://kos0616.github.io/vueResize/).
