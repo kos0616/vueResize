@@ -1,0 +1,2 @@
+# vueResize
+想以prototype的方式取得addEventListener內的資料
